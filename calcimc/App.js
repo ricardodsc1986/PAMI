@@ -16,11 +16,11 @@ export default function App() {
   const [imc, setIMC] = useState(0);
 
   const calculoIMC = () => {
-    const a = parseFloat(peso);
-    const b = parseFloat(alt);
+    const p = parseFloat(peso);
+    const a = parseFloat(alt);
 
-    if (!isNaN(a) && !isNaN(b) && b > 0) {
-      const calcIMC = a / (b * b);
+    if (!isNaN(p) && !isNaN(a) && a > 0) {
+      const calcIMC = p / (a * a);
       setIMC(calcIMC);
 
       if (calcIMC <= 18.5) {
